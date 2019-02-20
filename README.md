@@ -33,7 +33,9 @@ After your push your image to GCR, go to Container Registry -> Settings page on 
 To create your Datalab VM with your image, you need to run from Cloud Shell:
 $ datalab create [--image-name IMAGE_NAME] [--zone ZONE] NAME
 
-You can then get along using Datalab in your regular way
+You can then get along using Datalab in your regular way.
+
+Note: The first time Datalab creation from the GCR image seems to take a while. So if the shell seems struck at 'Waiting for Datalab to be available on 8081' message, just wait for a while. It is a one-time delay.
 
 # Optional step
 In the rare event Datalab (Jupyter) does not discover your OpenCV, run the below command, opencv-python gets properly installed. 
