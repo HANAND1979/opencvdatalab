@@ -8,11 +8,9 @@ I also tried Google's suggestion on Extending the Datalab as described in the be
 https://github.com/googledatalab/datalab/wiki/Getting-Started
 https://github.com/googledatalab/datalab/tree/master/containers/datalab
 
-In the above documentation, I really couldn't figure out:
-a. where is the $REPO that they are referring to? 
-b. My requirement wasn't getting fulfilled by just doing a pip install opencv-python anyways 
+Deploying OpenCV seemed to require lot more than installing packages. (If you know a more efficient way, please let me know !)  
 
-(I did consider modifying run.sh - but it was getting too complex and time-consuming. Another option I wanted to try was modifying the startup script attached to the VM. Will experiment some other time !)  
+(I did consider modifying run.sh - but it was getting too complex and time-consuming. Another option I wanted to try was modifying the startup script attached to the VM. Will experiment some other time ! But given that installing OpenCV is quite time consuming, this doesn't appear to be an efficient option.)  
 
 # About this Dockerfile
 
