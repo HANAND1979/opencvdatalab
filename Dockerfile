@@ -18,3 +18,8 @@ RUN wget https://github.com/opencv/opencv/archive/3.4.2.zip \
 && cd OpenCV && mkdir build && cd build \
 && cmake -DWITH_QT=ON -DWITH_OPENGL=ON -DFORCE_VTK=ON -DWITH_TBB=ON -DWITH_GDAL=ON -DWITH_XINE=ON -DBUILD_EXAMPLES=ON -DENABLE_PRECOMPILED_HEADERS=OFF ..\ 
 && make -j4 && make install && ldconfig
+RUN /usr/local/envs/py3env/bin/python -m pip install opencv-python
+#Often working with Datalab you also need to access Google Cloud storage. So just baked it in as well as an add-on
+#Ideally i think Google should put in these packages as well in standard Datalab build
+RUN pip install google-cloud-storage
+RUN pip install google-cloud-core>=0.29.0
