@@ -35,8 +35,13 @@ $ datalab create [--image-name IMAGE_NAME] [--zone ZONE] NAME
 
 You can then get along using Datalab in your regular way
 
-If you run the below command, opencv-python gets properly installed
+# Optional step
+In the rare event Datalab (Jupyter) does not discover your OpenCV, run the below command, opencv-python gets properly installed. 
+
 !/usr/local/envs/py3env/bin/python -m pip install opencv-python
 
 After this go ahead with 
 import cv2 as cv etc. 
+
+# Add-on of Cloud Storage API package
+Often while working with datalab I found the need to read/write from Google Cloud Storage. So have baked in those as well into the build. Just reduces number of imports you have to do. 
