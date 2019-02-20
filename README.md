@@ -24,6 +24,8 @@ The OpenCV installation code is based on code published at https://github.com/mi
 
 After building your image from your Google Cloud VM, follow the steps outlined here (https://cloud.google.com/container-registry/docs/quickstart#add_the_image_to) to publish the image to Google Container Registry. 
 
+Important Note: Apparently for you to be able to push the image to GCR, the VM need 'Storage Write' access. So after building the image, stop the VM on which you were building the image, edit the VM -> Go to 'Access Scopes' -> Use the option 'Set access for each API' -> 'Enable Full Access' or 'Read Write' access as you wish. 
+
 After your push your image to GCR, go to Container Registry -> Settings page on GCP Console, in Security settings make the Container Registry host "Public". (Note that if it is set to 'Private' your Docker pull to create the Datalab VM will not work.)	
 
 # Creating a Datalab VM with your image
