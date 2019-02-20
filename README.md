@@ -16,7 +16,7 @@ b. My requirement wasn't getting fulfilled by just doing a pip install opencv-py
 
 # About this Dockerfile
 
-OpenCV and Datalab in themselves are very powerful. This is an attempt to create a unified Dockerfile which you can use to build an image which has Datalab has base and OpenCV baked on top of it. 
+OpenCV and Datalab in themselves are very powerful. This is an attempt to create a unified Dockerfile which you can use to build an image which has Datalab has base and OpenCV (version 4.0.0) baked on top of it. 
 
 The OpenCV installation code is based on code published at https://github.com/milq/milq/blob/master/scripts/bash/install-opencv.sh and has been adapted to Dockerfile format.   
 
@@ -38,12 +38,12 @@ You can then get along using Datalab in your regular way.
 Note: The first time Datalab creation from the GCR image seems to take a while. So if the shell seems struck at 'Waiting for Datalab to be available on 8081' message, just wait for a while. It is a one-time delay.
 
 # Optional step
-In the rare event Datalab (Jupyter) does not discover your OpenCV, run the below command, opencv-python gets properly installed. 
+In the rare event Datalab (Jupyter) does not discover your OpenCV, run the below command, opencv-python gets properly installed. In my tests of this build, this step is not necessary. Still in case you hit an issue, please try the below step.
 
 !/usr/local/envs/py3env/bin/python -m pip install opencv-python
 
-After this go ahead with 
-import cv2 as cv etc. 
+After this go ahead with usual Python programming. 
+import cv2 as cv 
 
 # Add-on of Cloud Storage API package
 Often while working with datalab I found the need to read/write from Google Cloud Storage. So have baked in those as well into the build. Just reduces number of imports you have to do. 
